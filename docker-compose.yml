@@ -1,0 +1,42 @@
+version: "3"
+
+services:
+  # Database
+  db:
+    # platform: linux/x86_64
+    image: mariadb
+    volumes:
+      - ./db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+    networks:
+      - wpsite
+    ports:
+      - "3306:3306"
+
+  # Wordpress
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress:latest
+    ports:
+      - "8001:80"
+    restart: always
+    volumes:
+      - ./wpfiles/:/var/www/html
+      - ./conf.d/php.ini:/usr/local/etc/php/conf.d/php.ini
+
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+    networks:
+      - wpsite
+networks:
+  wpsite:
+volumes:
+  db_data:
