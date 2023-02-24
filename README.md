@@ -22,15 +22,9 @@ ContainerBox Project
  
  Bienvenue dans la version francaise de ce projet
  
- * Download the script.
+ 
 
-* change the file permission with 777 
-
-    ` ` ` sudo chmod 777 firstscript.sh ` ` ` 
-
-* Run the script with sudo.  
-
-   ` ` ` sudo ./firstscript.sh ` ` ` 
+   ` ` ` git clone  ` ` ` 
    
    
    ` ` ` docker compose up -d ` ` ` 
