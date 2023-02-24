@@ -32,8 +32,7 @@ ContainerBox Project
  
    
    
-
-* Latest current version with respective OS's of docker will be installed.
+##Merci d'avoir utilisé DockerBox
 
  ## Prerequisite:
     * Ubuntu OS.
