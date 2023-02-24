@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to the  Containerbox:NGINX</h1>
+<h1 align="center">Welcome to the  Containerbox:Wordpress</h1>
 
 ## English Version 🇬🇧 
 
