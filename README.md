@@ -24,7 +24,7 @@ ContainerBox Project
  
  
 
-   ` ` ` git clone  ` ` ` 
+   ` ` ` git clone https://github.com/containerbox/wordpress.git ` ` ` 
    
    
    ` ` ` docker compose up -d ` ` ` 
